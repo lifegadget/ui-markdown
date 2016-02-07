@@ -1,6 +1,6 @@
 {
   "name": "ui-markdown",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "convert markdown to a styled HTML document",
   "directories": {
     "doc": "doc",
@@ -17,6 +17,21 @@
   },
   "author": "Ken Snyder <ken@ken.net>",
   "license": "MIT",
+  "files": [
+    "ember-cli-build.js",
+    "LICENSE.md",
+    "README.md",
+    "addon",
+    "blueprints",
+    "app",
+    "bower.json",
+    "index.js",
+    "package.json",
+    "testem.json",
+    "vendor",
+    "public",
+    "public/images/"
+  ],
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
     "ember-ajax": "0.7.1",
