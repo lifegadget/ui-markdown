@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   layout: layout,
   tagName: 'span',
   classNames: ['markdown-file'],
-  style='default',
+  style:'default',
 
   content: computed('url', {
     set(_, value) {
@@ -21,7 +21,6 @@ export default Ember.Component.extend({
     get() {
       let url = this.get('url');
       $.get(url, data => {
-          console.log('received markdown content: data', data);
           this.set('content', data);
         });
 

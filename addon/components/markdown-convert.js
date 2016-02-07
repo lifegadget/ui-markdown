@@ -13,7 +13,6 @@ export default Ember.Component.extend({
   tagName: 'span',
   classNames: ['ui-markdown'],
   style: 'no',
-
   init: function(...args) {
     this._super(args);
 
@@ -64,5 +63,11 @@ export default Ember.Component.extend({
     }
     const source =  this.get('content') || '';
     return new Ember.Handlebars.SafeString(this.converter.makeHtml(source));
-  })
+  }),
+
+  tables: true,
+  taskslists: true,
+  ghCodeBlocks: true,
+  strikethrough: true,
+  omitExtraWLInCodeBlocks: true
 });
