@@ -1,1 +1,5 @@
-{{yield}}
+{{#if content}}
+  {{markdown-convert content=content style=style}}
+{{else}}
+  {{yield}}
+{{/if}}

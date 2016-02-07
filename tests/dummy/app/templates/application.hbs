@@ -107,4 +107,30 @@
   </div>
 </div>
 
+<h3>HTML File Example</h3>
+<div class="row">
+  <div class="col-xs-4">
+  <h4>Loading a Markdown File</h4>
+  We'll just load a full Markdown test file that resides externally with the following command:
+
+<pre class="language-handlebars">\{{markdown-file
+  url='assets/markdown-file.md'
+  style='{{fileStyle}}'
+}}</pre>
+
+<p>
+  Choose from one of the following styles:
+  <br>
+  {{radio-buttons buttons='github,foghorn,avenir,screen,swiss' defaultValue='github' value=fileStyle}}
+</p>
+
+  </div>
+  <div class="col-xs-8">
+    {{markdown-file url='docs/markdown-file.md' style=fileStyle}}
+  </div>
+</div>
+
 {{/app-page}}
+<p>
+  <br>
+</p>
