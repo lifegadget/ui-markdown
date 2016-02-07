@@ -43,7 +43,7 @@ By default it will add CSS classes but add no styling to these classes. If you p
 
 ## Demo
 
-Check out the demo at: TBD
+Check out the demo at: [ui-markdown](https://ui-markdown.firebaseapp.com/)
 
 ## MIT License
 
