@@ -15,4 +15,6 @@ ratings:
    - "**.js"
 exclude_paths:
 - tests/**/*
+- node_modules/**/*
+- bower_components/**/*
 - app/**/*
