@@ -1,26 +1,37 @@
-# Ui-markdown
-
-This README outlines the details of collaborating on this Ember addon.
+# ui-markdown
+> convert markdown to a styled HTML document
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+    ember install ui-markdown
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Use an inline style if you're bringing content from a structured source like ember-data
 
-## Running Tests
+````handlebars
+{{markdown-convert content='#Hello World'}}
+````
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+or use the _block_ style if you want to inline content:
 
-## Building
+````handlebars
+{{#markdown-convert style='github'}}
+  #Hello World
+  _welcome home,_ my `earthling` friend
+{{/markdown-convert}}
+````
 
-* `ember build`
+or finally, if the markdown resides on a URL based resource then you can just use:
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+````handlebars
+{{markdown-file url='/docs/myDoc.md'}}
+````
+
+## Styling the HTML
+
+By default it will add CSS classes but add no styling to these classes. If you prefer styling you can choose from several themes including `github`.
+
+## Demo
+
+Check out the demo at: TBD
