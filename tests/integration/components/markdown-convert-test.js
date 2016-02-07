@@ -9,16 +9,16 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });"
 
-  this.render(hbs`{{markdown-convert}}`);
+  this.render(hbs`{{markdown-convert content='#Hello World'}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('h1').text().trim(), 'Hello World');
 
   // Template block usage:"
   this.render(hbs`
     {{#markdown-convert}}
-      template block text
+      #Hello World
     {{/markdown-convert}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('h1').text().trim(), 'Hello World');
 });

@@ -16,7 +16,7 @@ export default Ember.Component.extend({
   init: function(...args) {
     this._super(args);
 
-    this.converter = new showdown.Converter({
+    this.converter = new showdown.Converter({ // jshint ignore:line
       extensions: (this.get("extensions") || [])
     });
 
