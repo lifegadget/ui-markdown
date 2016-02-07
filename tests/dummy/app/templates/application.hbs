@@ -1,3 +1,110 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#app-page
+  repo='ui-markdown'
+  repoOwner='lifegadget'
+  subHeading='convert markdown to a styled HTML document'
+  currentPath=currentPath
+}}
+  <h3>Intro</h3>
+  This addon includes two components:
+  <ul>
+    <li>
+      <b>markdown-convert</b> - the primary component which uses showdown to convert the markdown to HTML
+    </li>
+    <li>
+      <b>markdown-file</b> - allows you to reference an external file for the markdown content
+    </li>
+  </ul>
 
-{{outlet}}
+  <h3>HTML Conversion Examples</h3>
+
+<div class="row"><div class="col-xs-4">
+    <h4>Inline conversion</h4>
+  <pre class="language-handlebars">\{{markdown-convert
+  content='#Hello World,_welcome home_'
+}}</pre>
+  </div>
+  <div class="col-xs-4 downer">
+    {{markdown-convert content='#Hello World, _welcome home_'}}
+  </div>
+  <div class="col-xs-4 downer">
+    <br>
+    <p>Here we see a simple, unstyled HTML conversion using the inline component format</p>
+  </div>
+  </div>
+<div class="row">
+  <div class="col-xs-4">
+    <h4>Block conversion</h4>
+  <pre class="language-handlebars">\{{#markdown-convert
+  #Hello World
+  _welcome home_
+\{{/markdown-convert}}</pre>
+  </div>
+  <div class="col-xs-4 downer">
+    {{#markdown-convert}}
+      #Hello World,
+      _welcome home_
+    {{/markdown-convert}}
+  </div>
+  <div class="col-xs-4 downer">
+    <br>
+    <p>Here we see a simple, unstyled HTML conversion using the <i>block</i> style component</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <h4>Styled Output</h4>
+  <pre class="language-handlebars">\{{#markdown-convert style='{{style}}'}}
+  #Hello World
+  _welcome home,_ my `earthling` friend
+
+  > **Note:** I'm just presuming you are human
+
+  ## Safety Check
+  Ok, maybe you're not human after all. In which case please ingest the following code:
+
+      foo = 'hello world';
+      bar = 'you are my favorite machine';
+      console.log(`${foo}\n${bar}`);
+
+  Now let's make sure we've checked off our checklist:
+
+  - say Hello
+  - assume humanity
+  - actually, check humanity
+  - [kiss machine's proverbial ass](http://www.memecenter.com/fun/452063/kiss-my-ass)
+\{{/markdown-convert}}</pre>
+  </div>
+  <div class="col-xs-4 downer">
+    {{#markdown-convert style=style}}
+      #Hello World
+      _welcome home,_ my `earthling` friend
+
+      > **Note:** I'm just presuming you are human
+
+      ## Safety Check
+      Ok, maybe you're not human after all. In which case please ingest the following code:
+
+          foo = 'hello world';
+          bar = 'you are my favorite machine';
+          console.log(`${foo}\n${bar}`);
+
+      Now let's make sure we've checked off our checklist:
+
+      - say Hello
+      - assume humanity
+      - actually, check humanity
+      - [kiss machine's proverbial ass](http://www.memecenter.com/fun/452063/kiss-my-ass)
+
+    {{/markdown-convert}}
+  </div>
+  <div class="col-xs-4 downer">
+    <br>
+    <p>There are a number of CSS styles that you can choose from to style your newly converted HTML.</p>
+    <p>
+      Choose from one of the following: {{radio-buttons buttons='github,foghorn,avenir,screen,swiss' defaultValue='github' value=style}}
+    </p>
+  </div>
+</div>
+
+{{/app-page}}

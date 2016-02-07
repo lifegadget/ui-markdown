@@ -1,0 +1,104 @@
+/* https://github.com/jasonm23/markdown-css-themes */
+
+.ui-markdown.screen-style {
+	font-size: 62.5%;
+}
+
+.ui-markdown.screen-style {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 150%;
+	line-height: 1.3;
+	color: #f6e6cc;
+	width: 100%;
+	margin: auto;
+	background: #27221a;
+	position: relative;
+	padding: 10px 30px;
+}
+
+
+.ui-markdown.screen-style p,
+.ui-markdown.screen-style ul,
+.ui-markdown.screen-style ol,
+.ui-markdown.screen-style dl,
+.ui-markdown.screen-style table,
+.ui-markdown.screen-style pre { margin-bottom: 1em; }
+.ui-markdown.screen-style ul { margin-left: 20px; }
+.ui-markdown.screen-style a { text-decoration: none; cursor: pointer; color: #ba832c; font-weight: bold; }
+.ui-markdown.screen-style a:focus { outline: 1px dotted; }
+.ui-markdown.screen-style a:visited {  }
+.ui-markdown.screen-style a:hover, a:focus { color: #d3a459; text-decoration: none; }
+.ui-markdown.screen-style a *,
+.ui-markdown.screen-style button * { cursor: pointer; }
+.ui-markdown.screen-style hr { display: none; }
+.ui-markdown.screen-style small { font-size: 90%; }
+
+.ui-markdown.screen-style input,
+.ui-markdown.screen-style select,
+.ui-markdown.screen-style button,
+.ui-markdown.screen-style textarea,
+.ui-markdown.screen-style option { font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; font-size: 100%; }
+
+.ui-markdown.screen-style button,
+.ui-markdown.screen-style label,
+.ui-markdown.screen-style select,
+.ui-markdown.screen-style option,
+.ui-markdown.screen-style input[type=submit] { cursor: pointer; }
+.ui-markdown.screen-style .group:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-markdown.screen-style .group {display: inline-block;}
+/* Hides from IE-mac \*/ .ui-markdown.screen-style * html .group {height: 1%;} .group {display: block;} /* End hide from IE-mac */
+.ui-markdown.screen-style sup { font-size: 80%; line-height: 1; vertical-align: super; }
+.ui-markdown.screen-style button::-moz-focus-inner { border: 0; padding: 1px; }
+.ui-markdown.screen-style span.amp { font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; font-weight: normal; font-style: italic; font-size: 1.2em; line-height: 0.8; }
+
+
+.ui-markdown.screen-style h1,
+.ui-markdown.screen-style h2,
+.ui-markdown.screen-style h3,
+.ui-markdown.screen-style h4,
+.ui-markdown.screen-style h5,
+.ui-markdown.screen-style h6 {
+    line-height: 1.1;
+    font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+}
+
+.ui-markdown.screen-style h2 { font-size: 22pt; }
+.ui-markdown.screen-style h3 { font-size: 20pt; }
+.ui-markdown.screen-style h4 { font-size: 18pt; }
+.ui-markdown.screen-style h5 { font-size: 16pt; }
+.ui-markdown.screen-style h6 { font-size: 14pt; }
+
+.ui-markdown.screen-style ::selection { background: #745626; }
+.ui-markdown.screen-style ::-moz-selection { background: #745626; }
+
+.ui-markdown.screen-style h1 {
+	font-size: 420%;
+	margin: 0 0 0.1em;
+	font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+}
+
+.ui-markdown.screen-style h1 a,
+.ui-markdown.screen-style h1 a:hover {
+	color: #d7af72;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.ui-markdown.screen-style pre {
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	padding: 8px 10px;
+	border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	overflow-x: hidden;
+}
+
+.ui-markdown.screen-style pre code {
+	font-size: 10pt;
+}
+
+.ui-markdown.screen-style .thumb {
+    float:left;
+    margin: 10px;
+}
