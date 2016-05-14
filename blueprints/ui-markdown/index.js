@@ -10,7 +10,7 @@ module.exports = {
 
 	afterInstall: function() {
     return this.addBowerPackagesToProject([
-      { name: 'showdown', target: '^1.3.0' }
+      { name: 'showdown', target: '^1.4.0' }
     ]);
 	}
 };
