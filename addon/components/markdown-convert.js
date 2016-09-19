@@ -62,7 +62,7 @@ export default Ember.Component.extend({
       }
     }
     const source =  this.get('content') || '';
-    return new Ember.Handlebars.SafeString(this.converter.makeHtml(source));
+    return new Ember.String.htmlSafe(this.converter.makeHtml(source));
   }),
 
   tables: true,
