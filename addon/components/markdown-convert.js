@@ -28,7 +28,7 @@ export default Ember.Component.extend({
         for(let i=0; textLines[i].trim() === ''; i++) {
           filterEmptyStarters.pushObject(i);
         }
-        textLines = textLines.filter((f,i)=>!filterEmptyStarters.contains(i));
+        textLines = textLines.filter((f,i)=>!filterEmptyStarters.includes(i));
         if (textLines.length > 0) {
           textLines[0] = textLines[0].replace(/\s{4}(.*)/, "$1"); // WHY IS THIS NEEDED ?!?!?!
           const baseIndentation = textLines[0].match(/^([\s]*)/)[1];
