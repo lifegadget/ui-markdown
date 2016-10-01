@@ -8,7 +8,9 @@ module.exports = {
 		this._super.included(app);
     var target = (parentAddon || app);
     var bower = target.bowerDirectory;
-    var options = target.options.uiMarkdown;
+    var options = typeof app.options === 'object' ? app.options : {};
+    var addonConfig = options['ui-markdown'] || {};
+
     target.import('vendor/ui-markdown/ui-markdown.css');
     target.import('vendor/ui-markdown/avenir.css');
     target.import('vendor/ui-markdown/github.css');
